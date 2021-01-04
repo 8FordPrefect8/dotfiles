@@ -1,0 +1,13 @@
+markup=1
+actions=1
+
+# Format
+font=Cantarell
+border-color=#33393b
+border-size=4
+background-color=#232729
+text-color=#dcdccc
+format=<b>%s</b> <span color="#93a1a1">(%a)</span>\n%b
+
+[urgency=high]
+border-color=#e5301e

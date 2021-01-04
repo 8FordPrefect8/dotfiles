@@ -37,10 +37,10 @@ output * bg ~/.config/wallpaper.png fill
 # Example configuration:
 #
 exec swayidle -w \
-	timeout 300 'swaylock -f -i ~/.config/wallpaper.png' \
+	timeout 300 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color ad8641 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2' \
 	timeout 600 'swaymsg "output * dpms off"' \
 	resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -i ~/.config/wallpaper.png'
+	before-sleep 'swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --ring-color ad8641 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -153,8 +153,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 #
 # Layout stuff:
 #
-client.focused #ad8641 #373737 #dcdccc #6969692e9ef4 #ad8641
-client.unfocused #4a4a4a #373737 #dcdccc #000000 #515151
+client.focused #33393b #232729 #dcdccc #919494 #215d9c
+client.unfocused #33393b #232729 #dcdccc #000000 #33393b
 #client.urgent #dd1b16bb #dd1b16bb #ffffff #dd1b16bb #dd1b16bb
 
 default_border pixel 2
@@ -274,8 +274,10 @@ exec nm-applet --indicator
 exec blueman-applet
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'Shades-of-gray-Harvest'
-    gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+    gsettings set $gnome-schema gtk-theme 'Adwaita-dark'
+    gsettings set $gnome-schema icon-theme 'Adwaita'
     gsettings set $gnome-schema cursor-theme 'Adwaita'
-    gsettings set $gnome-schema font-name 'DejaVu Sans Book'
+    gsettings set $gnome-schema font-name 'Cantarell Regular'
 }
+exec eval $(gnome-keyring-daemon --start)
+exec export SSH_AUTH_SOCK

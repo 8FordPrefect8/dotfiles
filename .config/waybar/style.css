@@ -120,13 +120,11 @@ label:focus {
 
 #backlight {
     background-color: #dcdccc;
-    color: #000000;
     color: #3f3f3f;
 }
 
 #pulseaudio {
     background-color: #dfcf9f;
-    color: #000000;
     color: #3f3f3f;
 }
 
